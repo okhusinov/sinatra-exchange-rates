@@ -17,7 +17,7 @@ get("/") do
 end
 
 get("/:from_currency") do
-  @the_symbol = params.fetch("from_currency")
+  @from = params.fetch("from_currency")
 
   exchange_rates_url = "https://api.exchangerate.host/list?access_key=#{ENV.fetch("EXCHANGE_RATES_KEY")}"
   @raw_response = HTTP.get(exchange_rates_url)

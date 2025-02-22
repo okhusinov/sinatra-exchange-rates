@@ -1,12 +1,12 @@
-<h1>Convert <%= @the_symbol %></h1>
+<h1>Convert <%= @from %></h1>
 
 <p>Go <a href="/">back</a>.</p>
 
 <ul>
-  <% @currencies.keys.each do |pair| %>
+  <% @currencies.keys.each do |to| %>
   <li>
-    <a href="<%= @the_symbol %>/<%= pair %>">
-      Convert 1 <%= @the_symbol %> to <%= pair %>...
+    <a href="/<%= @from %>/<%= to %>">
+      Convert 1 <%= @from %> to <%= to %>...
     </a>
   </li>
   <% end %>
